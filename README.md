@@ -37,7 +37,7 @@
 
 비기능적 요구사항
 1. 트랜잭션
-    1. 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다/.  Sync 호출 
+    1. 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다.  Sync 호출 
 1. 장애격리
     1. 숙소관리 기능이 수행되지 않더라도 예약은 365일 24시간 받을 수 있어야 한다  Async (event-driven), Eventual Consistency
     1. 결제시스템이 과중되면 관리자가 결제를 잠시후에 하도록 유도한다. 고객에게는 Pending상태로 보여준다.  Circuit breaker, fallback
@@ -165,7 +165,7 @@
 ![es-08](https://user-images.githubusercontent.com/63624005/81638345-da118880-9453-11ea-87fe-3253a9414eb5.jpg)
 
     - 트랜잭션
-      . 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다/. Sync 호출
+      . 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다. Sync 호출
     - 장애격리
       . 숙소관리 기능이 수행되지 않더라도 예약은 365일 24시간 받을 수 있어야 한다. Async (event-driven), Eventual Consistency
       . 결제시스템이 과중되면 관리자가 결제를 잠시후에 하도록 유도한다. 고객에게는 Pending상태로 보여준다. Circuit breaker, fallback
