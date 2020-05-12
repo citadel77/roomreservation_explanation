@@ -106,7 +106,7 @@
 # 분석/설계
 
 ## Event Storming 결과
-* MSAEz 로 모델링한 이벤트스토밍 결과:  https://github.com/msa-2team/roomreservation_explanation/issues/10#issue-616270801
+* MSAEz 로 모델링한 이벤트스토밍 결과: 
 
 
 ### 이벤트 도출
