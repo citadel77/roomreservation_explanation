@@ -162,7 +162,7 @@
 
 
 ### 비기능 요구사항에 대한 검증
-![image](https://user-images.githubusercontent.com/487999/79684184-5c9a9400-826a-11ea-8d87-2ed1e44f4562.png)
+![es-08](https://user-images.githubusercontent.com/63624005/81638345-da118880-9453-11ea-87fe-3253a9414eb5.jpg)
 
     - 트랜잭션
       . 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다/. Sync 호출
