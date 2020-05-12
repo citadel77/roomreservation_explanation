@@ -142,6 +142,8 @@
 ### 폴리시의 이동과 컨텍스트 매핑 (남색은 Pub/Sub, 주황은 Req/Resp)
 ![es-06](https://user-images.githubusercontent.com/63624005/81630868-a2014a00-9441-11ea-94a5-83f64c2f41b1.jpeg)
 
+![es-06-1](https://user-images.githubusercontent.com/63624005/81646432-2f569580-9466-11ea-9603-76351538c537.jpg)
+
 
 ### 완성된 1차 모형
 ![msaez](https://user-images.githubusercontent.com/63624014/81624811-1d5aff80-9432-11ea-9310-5760ff4a0829.PNG)
