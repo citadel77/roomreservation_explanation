@@ -118,8 +118,8 @@
     - 과정중 도출된 잘못된 도메인 이벤트들을 걸러내는 작업을 수행함
         - 숙소 재고가능 확인됨, 숙소 재고불가능 확인됨 : UI 의 이벤트이지, 업무적인 의미의 이벤트가 아니라서 제외
 
-### 액터, 커맨드 부착하여 읽기 좋게
-![image](https://user-images.githubusercontent.com/487999/79683614-4ee30f80-8266-11ea-9a50-68cdff2dcc46.png)
+### 액터, 커맨드, 폴리시 부착
+![es-03](https://user-images.githubusercontent.com/63624005/81627702-bb9e9380-9439-11ea-8748-a64ba9e2a677.jpeg)
 
 ### 어그리게잇으로 묶기
 ![image](https://user-images.githubusercontent.com/487999/79683618-52769680-8266-11ea-9c21-48d6812444ba.png)
