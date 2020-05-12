@@ -162,14 +162,14 @@
 
 
 ### 비기능 요구사항에 대한 검증
-![es-08](https://user-images.githubusercontent.com/63624005/81638345-da118880-9453-11ea-87fe-3253a9414eb5.jpg)
+![es-08](https://user-images.githubusercontent.com/63624005/81639743-cb2cd500-9457-11ea-8864-def0265b815b.jpg)
 
-    - 트랜잭션
+    - 트랜잭션 (1)
       . 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다. Sync 호출
-    - 장애격리
+    - 장애격리 (2)
       . 숙소관리 기능이 수행되지 않더라도 예약은 365일 24시간 받을 수 있어야 한다. Async (event-driven), Eventual Consistency
       . 결제시스템이 과중되면 관리자가 결제를 잠시후에 하도록 유도한다. 고객에게는 Pending상태로 보여준다. Circuit breaker, fallback
-    - 성능
+    - 성능 (3)
       . 고객이 숙소에 대한 최종 예약상태를 예약시스템(프론트엔드)에서 확인할 수 있어야 한다. CQRS
       . 관리자가 숙소요청상태를 숙소관리시스템(프론트엔드)에서 확인할 수 있어야 한다. CQRS
 
