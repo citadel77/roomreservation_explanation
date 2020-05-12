@@ -110,8 +110,7 @@
 
 
 ### 이벤트 도출
-![박규원선임_6](https://user-images.githubusercontent.com/63624014/81556998-37f78f00-93c6-11ea-87b4-944544df82da.jpeg)
-
+![es-o1](https://user-images.githubusercontent.com/63624005/81626895-e25bca80-9437-11ea-9d74-9a59aa41141c.jpeg)
 
 ### 부적격 이벤트 탈락
 ![image](https://user-images.githubusercontent.com/487999/79683612-4b4f8880-8266-11ea-9519-7e084524a462.png)
