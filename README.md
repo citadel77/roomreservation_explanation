@@ -145,6 +145,8 @@
 ### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
 ![es-06-0](https://user-images.githubusercontent.com/63624005/81761831-f241e000-9505-11ea-9266-e2d396bab028.jpg)
 
+![es-06-old](https://user-images.githubusercontent.com/63624005/81771800-ef9fb480-951e-11ea-856c-f0eca4414cdc.jpg)
+
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
     - 예약이 확정되면 결제시스템 결제가 완료된다. --> 결제 실패시?
@@ -161,8 +163,6 @@
     
     - 모든 요구사항을 커버함.
     
-![es-06-old](https://user-images.githubusercontent.com/63624005/81771800-ef9fb480-951e-11ea-856c-f0eca4414cdc.jpg)
-
 <img width="1102" alt="es-07" src="https://user-images.githubusercontent.com/63624005/81761227-5cf21c00-9504-11ea-9d43-2b6679d85b12.png">
 
 
