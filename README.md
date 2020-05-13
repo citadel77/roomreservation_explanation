@@ -282,46 +282,48 @@ public interface ReservationRepository extends PagingAndSortingRepository<Reserv
 - reservation 서비스에서 예약요청 
 ```  
   http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
-```    
-  ![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
+```   
+
+![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
 
 
 - management 서비스 확인
-```  
+
 ![dv-02](https://user-images.githubusercontent.com/63624005/81763750-e9074200-950a-11ea-8d9a-f533be2ffbde.png)
-```  
+  
 
 - managementList 서비스에서 reserveId 저장 확인
 ```  
 http localhost:8082/managementLists/1
+``` 
+
 ![dv-03](https://user-images.githubusercontent.com/63624005/81763766-f15f7d00-950a-11ea-9ea3-d138ee246485.png)
-```  
+
+
 - management 서비스의 승인처리
 ```  
 http localhost:8082/managements reserveId=”reserve1”
+``` 
+
 ![dv-04](https://user-images.githubusercontent.com/63624005/81763782-f9b7b800-950a-11ea-94d2-b6c9d96e9c59.png)
-```  
+
+
 - payment 서비스 확인
-```  
+
 ![dv-05](https://user-images.githubusercontent.com/63624005/81763795-03412000-950b-11ea-8597-a3c0713cd5fd.png)
-```  
+  
 
 - kafka 수신 확인
-```  
+ 
 ![dv-06](https://user-images.githubusercontent.com/63624005/81763810-0b995b00-950b-11ea-99fa-13e089a3060b.png)
-```  
+  
 
 
 ## 폴리글랏 퍼시스턴스
 
-```
 
-
-```
 
 ## 폴리글랏 프로그래밍
-
-
 
 
 
@@ -358,9 +360,9 @@ management와 시스템은 reservation, payment 시스템과 완전히 분리되
 
 
 - management 시스템을 잠시 내려 놓음
-```
+
 ![dv-11](https://user-images.githubusercontent.com/63624005/81765091-eeb25700-950d-11ea-92f6-436329052752.png)
-```
+
 
 - 예약 처리
 ```
@@ -371,23 +373,25 @@ http POST localhost:8081/reservations reserveId=”reserve3” userId=”user1�
 - 예약상태 확인
 ```
 http localhost:8081/reservations     
+``` 
+
 ![dv-12](https://user-images.githubusercontent.com/63624005/81765107-f70a9200-950d-11ea-8e3b-029d9b1bb629.png)
-```
+
 
 - 예약 완료 상태까지 Event 진행 확인
-```
+
 ![dv-13](https://user-images.githubusercontent.com/63624005/81765130-012c9080-950e-11ea-84d3-9d3a4f6136ba.png)
-```
+
 
 - management 시스템 재기동 후 management 시스템에 Update 되었는지 확인(CQRS)
   고객이 숙소에 예약 신청한 내역을 managementList view에서 확인할 수 있다.
-```
+
 ![dv-14](https://user-images.githubusercontent.com/63624005/81765144-0984cb80-950e-11ea-9c98-dd84597c3825.png)
 
 ![dv-15](https://user-images.githubusercontent.com/63624005/81765184-1b666e80-950e-11ea-8722-60464240fe71.png)
 
 ![dv-16](https://user-images.githubusercontent.com/63624005/81765197-228d7c80-950e-11ea-8ff6-835dbc760c26.png)
-```
+
 
 - API 게이트웨이
  Local 테스트 환경에서는 localhost:8080에서 Gateway API가 작동해야함
@@ -396,9 +400,8 @@ http localhost:8081/reservations
 
 - Gateway 설정 파일 
  GATEWAY 
-```
+
 ![dv-17](https://user-images.githubusercontent.com/63624005/81765217-2caf7b00-950e-11ea-8d8b-935347e5dfc8.png)
-```
 
 
 
