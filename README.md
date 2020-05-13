@@ -37,7 +37,7 @@
 
 비기능적 요구사항
 1. 트랜잭션
-    1. 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다. Sync 호출 
+    1. 고객이 예약한 건에 대하여 관리자가 예약가능 여부를 확인한 후에 결제를 진행한다. 
 1. 장애격리
     1. 숙소관리 기능이 수행되지 않더라도 예약은 365일 24시간 받을 수 있어야 한다. Async (event-driven), Eventual Consistency
     1. 결제시스템이 과중되면 관리자가 결제를 잠시후에 하도록 유도한다. 고객에게는 Pending상태로 보여준다. Circuit breaker, fallback
@@ -142,11 +142,11 @@
 ### 폴리시의 이동과 컨텍스트 매핑 (남색은 Pub/Sub, 주황은 Req/Resp)
 ![es-06](https://user-images.githubusercontent.com/63624005/81630868-a2014a00-9441-11ea-94a5-83f64c2f41b1.jpeg)
 
-![es-06-1](https://user-images.githubusercontent.com/63624005/81757745-d8e76680-94fa-11ea-8ade-8dcbcaeec73a.jpg)
+![es-06-1](https://user-images.githubusercontent.com/63624005/81761205-4ea40000-9504-11ea-8b93-c9b0aa61d58a.jpg)
 
 
 ### 완성된 1차 모형
-![msaez](https://user-images.githubusercontent.com/63624014/81624811-1d5aff80-9432-11ea-9310-5760ff4a0829.PNG)
+<img width="1102" alt="es-07" src="https://user-images.githubusercontent.com/63624005/81761227-5cf21c00-9504-11ea-9d43-2b6679d85b12.png">
 
 
 ### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
@@ -164,10 +164,10 @@
 
 
 ### 비기능 요구사항에 대한 검증
-![es-08](https://user-images.githubusercontent.com/63624005/81639743-cb2cd500-9457-11ea-8864-def0265b815b.jpg)
+![es-08](https://user-images.githubusercontent.com/63624005/81761245-68ddde00-9504-11ea-8a48-35891592d982.jpg)
 
     - 트랜잭션 (1)
-      . 결제가 되지 않은 예약건은 아예 거래가 성립되지 않아야 한다. [Sync 호출]
+      . 고객이 예약한 건에 대하여 관리자가 예약가능 여부를 확인한 후에 결제를 진행한다.
     - 장애격리 (2)
       . 숙소관리 기능이 수행되지 않더라도 예약은 365일 24시간 받을 수 있어야 한다. 
         [Async (event-driven), Eventual Consistency]
