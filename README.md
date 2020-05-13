@@ -184,89 +184,125 @@
 ![es-09](https://user-images.githubusercontent.com/63624005/81641090-290eec00-945b-11ea-8e55-65f74e8329b2.jpg)
 
 
-# 구현:
+
+# 구현
 
 분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라, 각 BC별로 대변되는 마이크로 서비스들을 스프링부트와 파이선으로 구현하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다 (각자의 포트넘버는 8081 ~ 808n 이다)
 
 ```
-cd app
+# reservationservice //port number: 8081
+cd reservation
 mvn spring-boot:run
 
-cd pay
-mvn spring-boot:run 
+# managementservice //port number: 8082
+cd management
+mvn spring-boot:run
 
-cd store
-mvn spring-boot:run  
-
-cd customer
-python policy-handler.py 
+# paymentservice //port number: 8083
+cd payment
+mvn spring-boot:run
 ```
 
 ## DDD 의 적용
 
-- 각 서비스내에 도출된 핵심 Aggregate Root 객체를 Entity 로 선언하였다: (예시는 pay 마이크로 서비스). 이때 가능한 현업에서 사용하는 언어 (유비쿼터스 랭귀지)를 그대로 사용하려고 노력했다. 하지만, 일부 구현에 있어서 영문이 아닌 경우는 실행이 불가능한 경우가 있기 때문에 계속 사용할 방법은 아닌것 같다. (Maven pom.xml, Kafka의 topic id, FeignClient 의 서비스 id 등은 한글로 식별자를 사용하는 경우 오류가 발생하는 것을 확인하였다)
+각 서비스내에 도출된 핵심 Aggregate Root 객체를 Entity로 선언하였다. (예시는 reservationsystem 마이크로 서비스) 
+  이때 가능한 현업에서 사용하는 언어 (유비쿼터스 랭귀지)를 그대로 사용하여, 모델링시 영문화하였다.
 
 ```
-package fooddelivery;
+package roomreservation;
 
 import javax.persistence.*;
 import org.springframework.beans.BeanUtils;
 import java.util.List;
 
 @Entity
-@Table(name="결제이력_table")
-public class 결제이력 {
+@Table(name="Reservation_table")
+public class Reservation {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-    private String orderId;
-    private Double 금액;
+    private String userId;
+    private String reserveId;
+    private String status;
+
+    @PostPersist
+    public void onPostPersist(){
+        Reserved reserved = new Reserved();
+        BeanUtils.copyProperties(this, reserved);
+        reserved.publish();
+    }
+    @PostRemove
+    public void onPostRemove(){
+        ReservationCanceled reservationCanceled = new ReservationCanceled();
+        BeanUtils.copyProperties(this, reservationCanceled);
+        reservationCanceled.publish();
+
+    }
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-    public String getOrderId() {
-        return orderId;
+    public String getUserId() {
+        return userId;
     }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
-    public Double get금액() {
-        return 금액;
+    public String getReserveId() {
+        return reserveId;
     }
-
-    public void set금액(Double 금액) {
-        this.금액 = 금액;
+    public void setReserveId(String reserveId) {
+        this.reserveId = reserveId;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }
+```
+
+Entity Pattern과 Repository Pattern을 적용하여 JPA를 통하여 다양한 데이터소스 유형(RDB)에 대한 별도의 처리가 없도록, 데이터 접근 어댑터를 자동 생성하기 위하여 Spring Data REST의 RestRepository를 적용하였다.
 
 ```
-- Entity Pattern 과 Repository Pattern 을 적용하여 JPA 를 통하여 다양한 데이터소스 유형 (RDB or NoSQL) 에 대한 별도의 처리가 없도록 데이터 접근 어댑터를 자동 생성하기 위하여 Spring Data REST 의 RestRepository 를 적용하였다
-```
-package fooddelivery;
+package roomreservation;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface 결제이력Repository extends PagingAndSortingRepository<결제이력, Long>{
-}
+public interface ReservationRepository extends PagingAndSortingRepository<Reservation, Long>{
 ```
-- 적용 후 REST API 의 테스트
+
+
+적용 후 REST API 의 테스트
+
 ```
-# app 서비스의 주문처리
-http localhost:8081/orders item="통닭"
+# reservation 서비스에서 예약요청 
+http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
 
-# store 서비스의 배달처리
-http localhost:8083/주문처리s orderId=1
+# management 서비스  확인
 
-# 주문 상태 확인
-http localhost:8081/orders/1
+
+# managementList 서비스에서 reserveId 저장 확인
+http localhost:8082/managementLists/1
+
+
+# management 서비스의 승인처리
+http localhost:8082/managements reserveId=”reserve1”
+
+
+# payment 서비스 확인
+
+
+# kafka 수신 확인
+
+
+
 
 ```
 
