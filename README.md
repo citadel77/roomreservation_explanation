@@ -409,8 +409,17 @@ http localhost:8081/reservations
 
 ## CI/CD 설정
 
-
 각 구현체들은 각자의 source repository 에 구성되었고, 사용한 CI/CD 플랫폼은 GCP를 사용하였으며, pipeline build script 는 각 프로젝트 폴더 이하에 cloudbuild.yml 에 포함되었다.
+
+*devops를 활용하여 pipeline을 구성하였고, CI CD 자동화를 구현하였다.
+
+![image](https://user-images.githubusercontent.com/63624035/81761684-88c1d180-9505-11ea-9e4f-e8664554f71f.png)
+
+* 아래와 같이 pod 가 정상적으로 올라간 것을 확인하였다.
+![image](https://user-images.githubusercontent.com/63624035/81761872-156c8f80-9506-11ea-8c23-55f8d347a2c8.png)
+
+* 아래와 같이 쿠버네티스에 모두 서비스로 등록된 것을 확인할 수 있다.
+![image](https://user-images.githubusercontent.com/63624035/81762154-de4aae00-9506-11ea-99b1-1b6068e34547.png)
 
 
 ## 동기식 호출 / 서킷 브레이킹 / 장애격리
@@ -630,25 +639,14 @@ Concurrency:		       96.02
 * 먼저 무정지 재배포가 100% 되는 것인지 확인하기 위해서 Autoscaler 이나 CB 설정을 제거함
 
 - seige 로 배포작업 직전에 워크로드를 모니터링 함.
-```
-siege -c100 -t120S -r10 --content-type "application/json" 'http://localhost:8081/orders POST {"item": "chicken"}'
 
-** SIEGE 4.0.5
-** Preparing 100 concurrent users for battle.
-The server is now under siege...
+![image](https://user-images.githubusercontent.com/63624035/81765032-ccb8d480-950d-11ea-9ca8-ec492af06c01.png)
 
-HTTP/1.1 201     0.68 secs:     207 bytes ==> POST http://localhost:8081/orders
-HTTP/1.1 201     0.68 secs:     207 bytes ==> POST http://localhost:8081/orders
-HTTP/1.1 201     0.70 secs:     207 bytes ==> POST http://localhost:8081/orders
-HTTP/1.1 201     0.70 secs:     207 bytes ==> POST http://localhost:8081/orders
-:
-
-```
+![image](https://user-images.githubusercontent.com/63624035/81764389-6da69000-950c-11ea-98d6-114141561d3d.png)
 
 - 새버전으로의 배포 시작
-```
-kubectl set image ...
-```
+
+![image](https://user-images.githubusercontent.com/63624035/81765398-ac3d4a00-950e-11ea-8e3b-a01e66031559.png)
 
 - seige 의 화면으로 넘어가서 Availability 가 100% 미만으로 떨어졌는지 확인
 ```
