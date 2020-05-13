@@ -156,10 +156,12 @@
     - 관리자가 숙소 요청상태를 중간중간 조회한다. (ok)
 
 
-### 수정모형    
+### 수정 모형    
 ![es-06-1](https://user-images.githubusercontent.com/63624005/81762482-aee87100-9507-11ea-8a6c-c58679dab0f1.jpg)
     
     - 모든 요구사항을 커버함.
+    
+![es-06-old](https://user-images.githubusercontent.com/63624005/81771800-ef9fb480-951e-11ea-856c-f0eca4414cdc.jpg)
 
 <img width="1102" alt="es-07" src="https://user-images.githubusercontent.com/63624005/81761227-5cf21c00-9504-11ea-9d43-2b6679d85b12.png">
 
