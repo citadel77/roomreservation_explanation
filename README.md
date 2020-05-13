@@ -287,7 +287,7 @@ public interface ReservationRepository extends PagingAndSortingRepository<Reserv
 ```
 
 
-적용 후 REST API 의 테스트
+## 적용 후 REST API 의 테스트
 - reservation 서비스에서 예약요청 
 ```  
   http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
@@ -394,9 +394,9 @@ http localhost:8081/reservations
 ![dv-16](https://user-images.githubusercontent.com/63624005/81765197-228d7c80-950e-11ea-8ff6-835dbc760c26.png)
 
 
-- API 게이트웨이
- Local 테스트 환경에서는 localhost:8080에서 Gateway API가 작동해야함
- Clous 환경에서는Clous 환경에서는 http://ip:8080 에서 Gateway API가 작동해야함 
+## API 게이트웨이
+
+ Clous 환경에서는Clous 환경에서는 //서비스명:8080 에서 Gateway API가 작동해야함 
  application.yml 파일에 profile별 gateway 설정
 
 - Gateway 설정 파일 
