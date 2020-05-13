@@ -282,9 +282,9 @@ public interface ReservationRepository extends PagingAndSortingRepository<Reserv
 - reservation 서비스에서 예약요청 
 ```  
   http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
-  
+```    
   ![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
-```  
+
 
 - management 서비스 확인
 ```  
