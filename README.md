@@ -147,7 +147,7 @@
 
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
-    - 예약이 확정되면 결제시스템 결제가 완료된다. --> 결제 실패에 대한 방안 필요
+    - 예약이 확정되면 결제시스템 결제가 완료된다. --> 결제 실패시?
     - 예약이 불가하면 숙소관리시스템에서 예약을 반려한다. (ok)
     
     - 고객이 예약을 취소할 수 있다. (ok)
@@ -186,7 +186,7 @@
 
 # 구현
 
-분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라, 각 BC별로 대변되는 마이크로 서비스들을 스프링부트와 파이선으로 구현하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다 (각자의 포트넘버는 8081 ~ 808n 이다)
+분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라, 각 BC별로 대변되는 마이크로 서비스들을 스프링부트와 파이선으로 구현하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다. (각자의 포트넘버는 8081 ~ 808n 이다)
 
 ```
 # reservationservice //port number: 8081
@@ -204,8 +204,8 @@ mvn spring-boot:run
 
 ## DDD 의 적용
 
-각 서비스내에 도출된 핵심 Aggregate Root 객체를 Entity로 선언하였다. (예시는 reservationsystem 마이크로 서비스) 
-  이때 가능한 현업에서 사용하는 언어 (유비쿼터스 랭귀지)를 그대로 사용하여, 모델링시 영문화하였다.
+각 서비스내에 도출된 핵심 Aggregate Root 객체를 Entity로 선언하였다(예시는 reservationsystem 마이크로 서비스).  
+  이때 가능한 현업에서 사용하는 언어(유비쿼터스 랭귀지)를 그대로 사용하여 모델링시 영문화 하였다.
 
 ```
 package roomreservation;
@@ -283,23 +283,24 @@ public interface ReservationRepository extends PagingAndSortingRepository<Reserv
 ```
 # reservation 서비스에서 예약요청 
 http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
+![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
 
-# management 서비스  확인
-
+# management 서비스 확인
+![dv-02](https://user-images.githubusercontent.com/63624005/81763750-e9074200-950a-11ea-8d9a-f533be2ffbde.png)
 
 # managementList 서비스에서 reserveId 저장 확인
 http localhost:8082/managementLists/1
-
+![dv-03](https://user-images.githubusercontent.com/63624005/81763766-f15f7d00-950a-11ea-9ea3-d138ee246485.png)
 
 # management 서비스의 승인처리
 http localhost:8082/managements reserveId=”reserve1”
-
+![dv-04](https://user-images.githubusercontent.com/63624005/81763782-f9b7b800-950a-11ea-94d2-b6c9d96e9c59.png)
 
 # payment 서비스 확인
-
+![dv-05](https://user-images.githubusercontent.com/63624005/81763795-03412000-950b-11ea-8597-a3c0713cd5fd.png)
 
 # kafka 수신 확인
-
+![dv-06](https://user-images.githubusercontent.com/63624005/81763810-0b995b00-950b-11ea-99fa-13e089a3060b.png)
 
 
 
