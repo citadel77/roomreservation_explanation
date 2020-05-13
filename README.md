@@ -159,9 +159,12 @@
 
 
 ### 수정 모형    
+    - 모든 요구사항을 커버함.
+
 ![es-06-1](https://user-images.githubusercontent.com/63624005/81762482-aee87100-9507-11ea-8a6c-c58679dab0f1.jpg)
     
-    - 모든 요구사항을 커버함.
+    
+    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 이벤트  수정하였다. (Pub/Sub)
     
 <img width="1102" alt="es-07" src="https://user-images.githubusercontent.com/63624005/81761227-5cf21c00-9504-11ea-9d43-2b6679d85b12.png">
 
