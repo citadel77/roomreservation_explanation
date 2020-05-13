@@ -1,0 +1,26 @@
+1. 서비스 죽이기
+kubectl scale deploy payment --replicas=0
+
+2. 서비스 살리기
+kubectl scale deploy payment --replicas=3
+kubectl scale deploy reservation --replicas=3
+kubectl scale deploy management --replicas=3
+kubectl scale deploy gateway --replicas=2
+
+3. 파일을 편집기에서 열어 spec > replicas 부분을 3-->5 로 수정
+kubectl scale deploy nginx --replicas=5
+
+4. kafka 파악
+- 토픽발행
+kubectl -n kafka exec my-kafka-0 -- /usr/bin/kafka-topics --zookeeper my-kafka-zookeeper:2181 --topic eventTopic --create --partitions 1 --replication-factor 1
+kubectl -n kafka exec my-kafka-0 -- /usr/bin/kafka-topics --zookeeper my-kafka-zookeeper:2181 --list
+- 한쪽
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-producer --broker-list my-kafka:9092 --topic eventTopic
+- 다른한쪽
+kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server my-kafka:9092 --topic eventTopic --from-beginning
+
+5. kubectl 로그
+kubectl logs product-cc7754ff9-gstct -f
+
+6. 버전 보기
+kubectl describe po
