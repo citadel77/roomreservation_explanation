@@ -139,7 +139,7 @@
       . General Domain : 결제
 
 
-### 폴리시의 이동과 컨텍스트 매핑 (남색은 Pub/Sub, 주황은 Req/Resp)
+### 폴리시의 이동과 컨텍스트 매핑
 ![es-06](https://user-images.githubusercontent.com/63624005/81630868-a2014a00-9441-11ea-94a5-83f64c2f41b1.jpeg)
 
 ![es-06-1](https://user-images.githubusercontent.com/63624005/81761205-4ea40000-9504-11ea-8b93-c9b0aa61d58a.jpg)
