@@ -413,7 +413,7 @@ http localhost:8081/reservations
 
 *devops를 활용하여 pipeline을 구성하였고, CI CD 자동화를 구현하였다.
 
-![image](https://user-images.githubusercontent.com/63624035/81761684-88c1d180-9505-11ea-9e4f-e8664554f71f.png)
+![image](https://user-images.githubusercontent.com/63624035/81771610-71431280-951e-11ea-91e9-8498a62e636e.png)
 
 * 아래와 같이 pod 가 정상적으로 올라간 것을 확인하였다.
 ![image](https://user-images.githubusercontent.com/63624035/81761872-156c8f80-9506-11ea-8c23-55f8d347a2c8.png)
