@@ -279,37 +279,32 @@ public interface ReservationRepository extends PagingAndSortingRepository<Reserv
 
 
 적용 후 REST API 의 테스트
-  - reservation 서비스에서 예약요청 
-```  
-  http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
-  
-  ![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
-```  
 
-  - management 서비스 확인
-```  
+```
+# reservation 서비스에서 예약요청 
+http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
+![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
+
+# management 서비스 확인
 ![dv-02](https://user-images.githubusercontent.com/63624005/81763750-e9074200-950a-11ea-8d9a-f533be2ffbde.png)
-```  
 
-- managementList 서비스에서 reserveId 저장 확인
-```  
+# managementList 서비스에서 reserveId 저장 확인
 http localhost:8082/managementLists/1
 ![dv-03](https://user-images.githubusercontent.com/63624005/81763766-f15f7d00-950a-11ea-9ea3-d138ee246485.png)
-```  
-  - management 서비스의 승인처리
-```  
+
+# management 서비스의 승인처리
 http localhost:8082/managements reserveId=”reserve1”
 ![dv-04](https://user-images.githubusercontent.com/63624005/81763782-f9b7b800-950a-11ea-94d2-b6c9d96e9c59.png)
-```  
-  - payment 서비스 확인
-```  
-![dv-05](https://user-images.githubusercontent.com/63624005/81763795-03412000-950b-11ea-8597-a3c0713cd5fd.png)
-```  
 
-  - kafka 수신 확인
-```  
+# payment 서비스 확인
+![dv-05](https://user-images.githubusercontent.com/63624005/81763795-03412000-950b-11ea-8597-a3c0713cd5fd.png)
+
+# kafka 수신 확인
 ![dv-06](https://user-images.githubusercontent.com/63624005/81763810-0b995b00-950b-11ea-99fa-13e089a3060b.png)
-```  
+
+
+
+```
 
 
 ## 폴리글랏 퍼시스턴스
@@ -715,17 +710,35 @@ Shortest transaction:	        0.00
 
 - 결제서비스에 대한 replica 를 동적으로 늘려주도록 HPA 를 설정한다. 설정은 CPU 사용량이 15프로를 넘어서면 replica 를 10개까지 늘려준다:
 ```
-kubectl autoscale deploy payment --min=1 --max=10 --cpu-percent=15
+kubectl autoscale deploy pay --min=1 --max=10 --cpu-percent=15
 ```
-- 워크로드를 동시사용자 10명으로 20초 동안 걸어준다.
-![시즈적용_10](https://user-images.githubusercontent.com/63624014/81764751-3edce980-950d-11ea-806e-d8f51a26c46d.PNG)
-
+- CB 에서 했던 방식대로 워크로드를 2분 동안 걸어준다.
+```
+siege -c100 -t120S -r10 --content-type "application/json" 'http://localhost:8081/orders POST {"item": "chicken"}'
+```
 - 오토스케일이 어떻게 되고 있는지 모니터링을 걸어둔다:
-![시즈적용_10_3](https://user-images.githubusercontent.com/63624014/81764796-574d0400-950d-11ea-88d4-56428f5be633.PNG)
-
-- siege 의 로그를 보명 10명까지는 성능에 문제가 없어보인다. 
-![시즈적용_10_2](https://user-images.githubusercontent.com/63624014/81764775-4c926f00-950d-11ea-93b8-ae86f7bb4cf5.PNG)
-
+```
+kubectl get deploy pay -w
+```
+- 어느정도 시간이 흐른 후 (약 30초) 스케일 아웃이 벌어지는 것을 확인할 수 있다:
+```
+NAME    DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+pay     1         1         1            1           17s
+pay     1         2         1            1           45s
+pay     1         4         1            1           1m
+:
+```
+- siege 의 로그를 보아도 전체적인 성공률이 높아진 것을 확인 할 수 있다. 
+```
+Transactions:		        5078 hits
+Availability:		       92.45 %
+Elapsed time:		       120 secs
+Data transferred:	        0.34 MB
+Response time:		        5.60 secs
+Transaction rate:	       17.15 trans/sec
+Throughput:		        0.01 MB/sec
+Concurrency:		       96.02
+```
 
 
 ## 무정지 재배포
@@ -733,25 +746,15 @@ kubectl autoscale deploy payment --min=1 --max=10 --cpu-percent=15
 * 먼저 무정지 재배포가 100% 되는 것인지 확인하기 위해서 Autoscaler 이나 CB 설정을 제거함
 
 - seige 로 배포작업 직전에 워크로드를 모니터링 함.
-```
-siege -c100 -t120S -r10 --content-type "application/json" 'http://localhost:8081/orders POST {"item": "chicken"}'
 
-** SIEGE 4.0.5
-** Preparing 100 concurrent users for battle.
-The server is now under siege...
+![image](https://user-images.githubusercontent.com/63624035/81765032-ccb8d480-950d-11ea-9ca8-ec492af06c01.png)
 
-HTTP/1.1 201     0.68 secs:     207 bytes ==> POST http://localhost:8081/orders
-HTTP/1.1 201     0.68 secs:     207 bytes ==> POST http://localhost:8081/orders
-HTTP/1.1 201     0.70 secs:     207 bytes ==> POST http://localhost:8081/orders
-HTTP/1.1 201     0.70 secs:     207 bytes ==> POST http://localhost:8081/orders
-:
-
-```
+![image](https://user-images.githubusercontent.com/63624035/81764389-6da69000-950c-11ea-98d6-114141561d3d.png)
 
 - 새버전으로의 배포 시작
-```
-kubectl set image ...
-```
+
+![image](https://user-images.githubusercontent.com/63624035/81765398-ac3d4a00-950e-11ea-8e3b-a01e66031559.png)
+
 
 - seige 의 화면으로 넘어가서 Availability 가 100% 미만으로 떨어졌는지 확인
 ```
