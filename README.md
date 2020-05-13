@@ -279,32 +279,37 @@ public interface ReservationRepository extends PagingAndSortingRepository<Reserv
 
 
 적용 후 REST API 의 테스트
+  - reservation 서비스에서 예약요청 
+```  
+  http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
+  
+  ![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
+```  
 
-```
-# reservation 서비스에서 예약요청 
-http localhost:8081/reservations reserveId=”reserve1” userId=”user1” status=”reserve”
-![dv-01](https://user-images.githubusercontent.com/63624005/81763734-df7dda00-950a-11ea-9793-34abab44c077.png)
-
-# management 서비스 확인
+  - management 서비스 확인
+```  
 ![dv-02](https://user-images.githubusercontent.com/63624005/81763750-e9074200-950a-11ea-8d9a-f533be2ffbde.png)
+```  
 
-# managementList 서비스에서 reserveId 저장 확인
+- managementList 서비스에서 reserveId 저장 확인
+```  
 http localhost:8082/managementLists/1
 ![dv-03](https://user-images.githubusercontent.com/63624005/81763766-f15f7d00-950a-11ea-9ea3-d138ee246485.png)
-
-# management 서비스의 승인처리
+```  
+  - management 서비스의 승인처리
+```  
 http localhost:8082/managements reserveId=”reserve1”
 ![dv-04](https://user-images.githubusercontent.com/63624005/81763782-f9b7b800-950a-11ea-94d2-b6c9d96e9c59.png)
-
-# payment 서비스 확인
+```  
+  - payment 서비스 확인
+```  
 ![dv-05](https://user-images.githubusercontent.com/63624005/81763795-03412000-950b-11ea-8597-a3c0713cd5fd.png)
+```  
 
-# kafka 수신 확인
+  - kafka 수신 확인
+```  
 ![dv-06](https://user-images.githubusercontent.com/63624005/81763810-0b995b00-950b-11ea-99fa-13e089a3060b.png)
-
-
-
-```
+```  
 
 
 ## 폴리글랏 퍼시스턴스
