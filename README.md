@@ -432,7 +432,7 @@ kubectl autoscale deploy payment --min=1 --max=10 --cpu-percent=15
 - 워크로드를 동시사용자 10명으로 20초 동안 걸어준다.
 ![시즈적용_10](https://user-images.githubusercontent.com/63624014/81764751-3edce980-950d-11ea-806e-d8f51a26c46d.PNG)
 
-- 오토스케일이 어떻게 되고 있는지 모니터링을 걸어둔다.
+- 오토스케일이 어떻게 되고 있는지 모니터링을 걸어둔다. 동시 사용자 10명으로 한 경우에는 시스템에 변화가 없다.
 ![시즈적용_10_3](https://user-images.githubusercontent.com/63624014/81764796-574d0400-950d-11ea-88d4-56428f5be633.PNG)
 
 - siege 의 로그를 보명 10명까지는 성능에 문제가 없어보인다. 
@@ -443,7 +443,7 @@ kubectl autoscale deploy payment --min=1 --max=10 --cpu-percent=15
 - 워크로드를 동시사용자 100명으로 20초 동안 걸어준다.
 ![시즈적용_100_1](https://user-images.githubusercontent.com/63624014/81766034-42be3b00-9510-11ea-8682-dab260440772.PNG)
 
-- 오토스케일이 어떻게 되고 있는지 모니터링을 걸어둔다.
+- 오토스케일이 어떻게 되고 있는지 모니터링을 걸어둔다. 시스템이 중간에 멈추는 경우가 발생한다.
 ![시즈적용_100_2](https://user-images.githubusercontent.com/63624014/81766051-4d78d000-9510-11ea-82c2-6a830718042c.PNG)
 
 - siege 의 로그를 보명 100일 때는 95%정도의 서비스 Available을 유지하고, SLA 수준에 따라 오토스케일 아웃을 지속적으로 조정한다.
