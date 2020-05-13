@@ -490,6 +490,14 @@ http localhost:8080/orders     # 모든 주문의 상태가 "배송됨"으로 �
 
 각 구현체들은 각자의 source repository 에 구성되었고, 사용한 CI/CD 플랫폼은 GCP를 사용하였으며, pipeline build script 는 각 프로젝트 폴더 이하에 cloudbuild.yml 에 포함되었다.
 
+![image](https://user-images.githubusercontent.com/63624035/81761684-88c1d180-9505-11ea-9e4f-e8664554f71f.png)
+
+* 아래와 같이 pod 가 정상적으로 올라간 것을 확인하였다.
+![image](https://user-images.githubusercontent.com/63624035/81761872-156c8f80-9506-11ea-8c23-55f8d347a2c8.png)
+
+* 아래와 같이 쿠버네티스에 모두 서비스로 등록된 것을 확인할 수 있다.
+![image](https://user-images.githubusercontent.com/63624035/81762154-de4aae00-9506-11ea-99b1-1b6068e34547.png)
+
 
 ## 동기식 호출 / 서킷 브레이킹 / 장애격리
 
