@@ -184,8 +184,9 @@
 
 
 ## 헥사고날 아키텍처 다이어그램 도출
-![es-09](https://user-images.githubusercontent.com/63624005/81641090-290eec00-945b-11ea-8e55-65f74e8329b2.jpg)
+![es-09](https://user-images.githubusercontent.com/63624005/81773899-56739c80-9524-11ea-97dc-cb1b968c2046.jpg)
 
+![es-09-1](https://user-images.githubusercontent.com/63624005/81773921-5e334100-9524-11ea-855a-a72b69b77503.jpg)
 
 
 # 구현
