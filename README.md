@@ -184,8 +184,12 @@
 
 
 ## 헥사고날 아키텍처 다이어그램 도출
+- 1차
 ![es-09](https://user-images.githubusercontent.com/63624005/81773899-56739c80-9524-11ea-97dc-cb1b968c2046.jpg)
 
+    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정하였다. (Pub/Sub)
+
+- 최종
 ![es-09-1](https://user-images.githubusercontent.com/63624005/81773921-5e334100-9524-11ea-855a-a72b69b77503.jpg)
 
 
