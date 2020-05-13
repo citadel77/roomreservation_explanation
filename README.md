@@ -446,7 +446,8 @@ kubectl autoscale deploy payment --min=1 --max=10 --cpu-percent=15
 ![시즈적용_100_2](https://user-images.githubusercontent.com/63624014/81766051-4d78d000-9510-11ea-82c2-6a830718042c.PNG)
 
 - siege 의 로그를 보명 100일 때는 95%정도의 서비스 Available을 유지하고, SLA 수준에 따라 오토스케일 아웃을 지속적으로 조정한다.
-![시즈적용_10_2](https://user-images.githubusercontent.com/63624014/81764775-4c926f00-950d-11ea-93b8-ae86f7bb4cf5.PNG)
+![시즈적용_100_3](https://user-images.githubusercontent.com/63624014/81766079-59649200-9510-11ea-96c5-dc233ed007b6.PNG)
+
 
 ## 무정지 재배포
 
