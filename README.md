@@ -164,6 +164,10 @@
 
     - Correlation Key
      . Reservation ID (reservation - management - payment - registration)
+    - View
+     . ReservationList : 숙소, 예약 진행상황, 결제 진행상황
+     . ManagementList : 예약 요청상황, 예약 가능여부, 결제 진행상황 
+     . RegistrationList : 숙소, 예약 상황
 
 
 ![jj-05-1](https://user-images.githubusercontent.com/63624005/81898100-f566ca00-95f2-11ea-93dd-ed47482696b5.jpg)
@@ -201,7 +205,7 @@
     - 성능 (3)
       . 고객이 숙소에 대한 최종 예약상태를 예약시스템(프론트엔드)에서 확인할 수 있어야 한다. [CQRS]
       . 관리자가 숙소요청상태를 숙소관리시스템(프론트엔드)에서 확인할 수 있어야 한다. [CQRS]
-      . (추가) 등록자가 숙소등록상태를 숙소등록시스템(프론트엔드)에서 확인할 수 있어야 한다. [CQRS]
+      . (추가) 등록자가 숙소등록상태를 숙소등록시스템(프론트엔드)에서 확인할 수 있어야 한다.
 
 
 ## 헥사고날 아키텍처 다이어그램 도출
