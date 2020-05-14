@@ -148,7 +148,7 @@
       . General Domain : 결제
 
 
-### 폴리시 부착 및 컨텍스트 매핑
+### 폴리시 부착
 ![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
 
 
