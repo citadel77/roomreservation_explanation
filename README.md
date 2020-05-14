@@ -146,6 +146,11 @@
       . Core Domain : 예약 
       . Supporting Domain : 숙소관리 + 숙소등록
       . General Domain : 결제
+    - 팀별 KPI
+      . 예약 : 예약 건수
+      . 숙소관리 : 예약 성공율
+      . 결제 : 결제 성공율
+      . 숙소등록 : 숙소 사용율
 
 
 ### 폴리시 부착
@@ -156,6 +161,9 @@
 ![jj-05-1](https://user-images.githubusercontent.com/63624005/81892923-44a6fd80-95e7-11ea-9512-ead5a81e8339.jpg)
 
 ![jj-05-1](https://user-images.githubusercontent.com/63624005/81892923-44a6fd80-95e7-11ea-9512-ead5a81e8339.jpg)
+
+    - Correlation Key
+     . Reservation ID (reservation - management - payment - registration)
 
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
