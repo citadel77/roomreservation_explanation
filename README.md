@@ -121,7 +121,7 @@
     
 
 ### 액터, 커맨드 부착
-![jj-02](https://user-images.githubusercontent.com/63624005/81884385-ba549e80-95d2-11ea-95ae-6c118b7dcc84.jpg)
+![jj-01-1](https://user-images.githubusercontent.com/63624005/81886071-c5a9c900-95d6-11ea-97ae-334588facdf7.jpg)
 
     - 추가
       . 액터 : 숙소 등록자
@@ -129,20 +129,21 @@
 
 
 ### 어그리게잇으로 묶기
-![jj-03](https://user-images.githubusercontent.com/63624005/81884392-c17bac80-95d2-11ea-9e0c-70dd317adfcf.jpg)
+
+![jj-02](https://user-images.githubusercontent.com/63624005/81884385-ba549e80-95d2-11ea-95ae-6c118b7dcc84.jpg)
 
 
 ### 바운디드 컨텍스트로 묶기
-![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
+![jj-03](https://user-images.githubusercontent.com/63624005/81884392-c17bac80-95d2-11ea-9e0c-70dd317adfcf.jpg)
 
     - 도메인 서열 분리
       . Core Domain : 예약 
-      . Supporting Domain : 숙소관리
+      . Supporting Domain : 숙소관리 + 숙소등록
       . General Domain : 결제
 
 
 ### 폴리시의 이동과 컨텍스트 매핑
-![es-06](https://user-images.githubusercontent.com/63624005/81630868-a2014a00-9441-11ea-94a5-83f64c2f41b1.jpeg)
+![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
 
 
 ### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
