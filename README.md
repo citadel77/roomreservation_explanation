@@ -164,6 +164,7 @@
 
     - Correlation Key
      . Reservation ID (reservation - management - payment - registration)
+     . Room Id (registration - reservation)
     - View
      . ReservationList : 숙소, 예약 진행상황, 결제 진행상황
      . ManagementList : 예약 요청상황, 예약 가능여부, 결제 진행상황 
