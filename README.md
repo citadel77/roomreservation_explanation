@@ -158,7 +158,7 @@
 
 
 ### 컨텍스트 매핑
-![jj-05](https://user-images.githubusercontent.com/63624005/81897781-432f0280-95f2-11ea-86c8-a91dff9ff761.jpg)
+![jj-05](https://user-images.githubusercontent.com/63624005/81898885-88ecca80-95f4-11ea-823d-5838b043ebfe.jpg)
 
 ![jj-05-0](https://user-images.githubusercontent.com/63624005/81898079-eb44cb80-95f2-11ea-88e2-311f4d6782db.jpg)
 
