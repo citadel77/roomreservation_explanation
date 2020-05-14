@@ -152,10 +152,14 @@
 ![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
 
 
-### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
+### 컨텍스트 매핑
 ![jj-05](https://user-images.githubusercontent.com/63624005/81884422-d7896d00-95d2-11ea-9023-d2c6afcabffc.jpg)
 
 ![jj-05-1](https://user-images.githubusercontent.com/63624005/81884433-de17e480-95d2-11ea-96ca-7d857e822511.jpg)
+
+
+### 1차 완성본 (기능적/비기능적 요구사항 검증)
+![jj-06](https://user-images.githubusercontent.com/63624005/81884448-eb34d380-95d2-11ea-8435-08065face49a.png)
 
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
