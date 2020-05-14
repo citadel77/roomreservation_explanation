@@ -158,12 +158,17 @@
 
 
 ### 컨텍스트 매핑
-![jj-05-1](https://user-images.githubusercontent.com/63624005/81892923-44a6fd80-95e7-11ea-9512-ead5a81e8339.jpg)
+![jj-05](https://user-images.githubusercontent.com/63624005/81897781-432f0280-95f2-11ea-86c8-a91dff9ff761.jpg)
 
-![jj-05-1](https://user-images.githubusercontent.com/63624005/81892923-44a6fd80-95e7-11ea-9512-ead5a81e8339.jpg)
+![jj-05-0](https://user-images.githubusercontent.com/63624005/81898079-eb44cb80-95f2-11ea-88e2-311f4d6782db.jpg)
 
     - Correlation Key
      . Reservation ID (reservation - management - payment - registration)
+
+
+![jj-05-1](https://user-images.githubusercontent.com/63624005/81898100-f566ca00-95f2-11ea-93dd-ed47482696b5.jpg)
+
+    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정 (Req/Res --> Pub/Sub)
 
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
