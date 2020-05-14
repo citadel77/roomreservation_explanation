@@ -111,12 +111,14 @@
 # 분석/설계
 
 ## Event Storming 결과
-* MSAEz 로 모델링한 이벤트스토밍 결과: http://msaez.io/#/storming/hDfo3RRSORR952Fat5IbrH6Xtj72/every/0603347a781868520a77b002b9917653/-M78OoQcR0OeilfQEd4e
+* MSAEz 로 모델링한 이벤트스토밍 결과: http://msaez.io/#/storming/O2fif4sDU5Qca7gMdXuAxWJXlS42/mine/4b6505b3ec1af64a110d5ec526aa76fc/-M7FqTiOh66G5k5c6Tjx
 
 
 ### 이벤트 도출
-![es-01](https://user-images.githubusercontent.com/63624005/81627098-63b35d00-9438-11ea-9fcd-6908cd746957.jpeg)
+![jj-01](https://user-images.githubusercontent.com/63624005/81884371-b163cd00-95d2-11ea-9865-572619664bce.jpg)
 
+    - 추가 : 숙소 등록됨, 숙소 취소됨
+    
 
 ### 부적격 이벤트 탈락
 ![es-02](https://user-images.githubusercontent.com/63624005/81627175-91000b00-9438-11ea-80cd-45cf02f9e909.jpg)
