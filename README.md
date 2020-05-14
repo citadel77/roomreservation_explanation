@@ -148,18 +148,18 @@
       . General Domain : 결제
 
 
-### 폴리시의 이동과 컨텍스트 매핑
+### 폴리시 부착 및 컨텍스트 매핑
 ![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
 
 
 ### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
-![es-06-0](https://user-images.githubusercontent.com/63624005/81761831-f241e000-9505-11ea-9266-e2d396bab028.jpg)
+![jj-05](https://user-images.githubusercontent.com/63624005/81884422-d7896d00-95d2-11ea-9023-d2c6afcabffc.jpg)
 
-![es-06-old](https://user-images.githubusercontent.com/63624005/81771800-ef9fb480-951e-11ea-856c-f0eca4414cdc.jpg)
+![jj-05-1](https://user-images.githubusercontent.com/63624005/81884433-de17e480-95d2-11ea-96ca-7d857e822511.jpg)
 
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
-    - 예약이 확정되면 결제시스템에서 결제가 완료된다. --> 결제 실패시?
+    - 예약이 확정되면 결제시스템에서 결제가 완료된다. (ok)
     - 예약이 불가하면 숙소관리시스템에서 예약을 반려한다. (ok)
     
     - 고객이 예약을 취소할 수 있다. (ok)
@@ -167,20 +167,13 @@
     - 고객이 숙소 예약상태를 중간중간 조회한다. (ok)
     - 관리자가 숙소 요청상태를 중간중간 조회한다. (ok)
 
-
-### 수정 모형    
-    - 모든 요구사항을 커버함.
-
-![es-06-1](https://user-images.githubusercontent.com/63624005/81762482-aee87100-9507-11ea-8a6c-c58679dab0f1.jpg)
-    
-    
-    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정하였다. (Pub/Sub)
-    
-<img width="1102" alt="es-07" src="https://user-images.githubusercontent.com/63624005/81761227-5cf21c00-9504-11ea-9d43-2b6679d85b12.png">
+    - (추가) 등록자가 숙소를 등록한다. (ok)
+    - (추가) 등록자가 숙소 등록을 취소할 수 있다. (ok)
+    - (추가) 등록자가 숙소 진행상태를 중간중간 조회한다. (ok)
 
 
 ### 비기능 요구사항에 대한 검증
-![es-08](https://user-images.githubusercontent.com/63624005/81761245-68ddde00-9504-11ea-8a48-35891592d982.jpg)
+![jj-07](https://user-images.githubusercontent.com/63624005/81884462-f425a500-95d2-11ea-865a-5d7ba0d0b22f.jpg)
 
     - 트랜잭션 (1)
       . 고객이 예약한 건에 대하여 관리자가 예약가능 여부를 확인한 후에 결제를 진행한다.
@@ -191,16 +184,13 @@
     - 성능 (3)
       . 고객이 숙소에 대한 최종 예약상태를 예약시스템(프론트엔드)에서 확인할 수 있어야 한다. [CQRS]
       . 관리자가 숙소요청상태를 숙소관리시스템(프론트엔드)에서 확인할 수 있어야 한다. [CQRS]
+      . (추가) 등록자가 숙소등록상태를 숙소등록시스템(프론트엔드)에서 확인할 수 있어야 한다. [CQRS]
 
 
 ## 헥사고날 아키텍처 다이어그램 도출
-- 1차
-![es-09](https://user-images.githubusercontent.com/63624005/81773899-56739c80-9524-11ea-97dc-cb1b968c2046.jpg)
-
-    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정하였다. (Pub/Sub)
-
-- 최종
 ![es-09-1](https://user-images.githubusercontent.com/63624005/81773921-5e334100-9524-11ea-855a-a72b69b77503.jpg)
+
+
 
 
 # 구현
