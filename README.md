@@ -153,9 +153,9 @@
 
 
 ### 컨텍스트 매핑
-![jj-05](https://user-images.githubusercontent.com/63624005/81884422-d7896d00-95d2-11ea-9023-d2c6afcabffc.jpg)
+![jj-05-1](https://user-images.githubusercontent.com/63624005/81892923-44a6fd80-95e7-11ea-9512-ead5a81e8339.jpg)
 
-![jj-05-1](https://user-images.githubusercontent.com/63624005/81884433-de17e480-95d2-11ea-96ca-7d857e822511.jpg)
+![jj-05-1](https://user-images.githubusercontent.com/63624005/81892923-44a6fd80-95e7-11ea-9512-ead5a81e8339.jpg)
 
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
