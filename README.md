@@ -159,7 +159,7 @@
 
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
-![jj-06](https://user-images.githubusercontent.com/63624005/81884448-eb34d380-95d2-11ea-8435-08065face49a.png)
+![jj-06](https://user-images.githubusercontent.com/63624005/81893304-5c32b600-95e8-11ea-80dd-343a823d3579.png)
 
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
@@ -177,7 +177,7 @@
 
 
 ### 비기능 요구사항에 대한 검증
-![jj-07](https://user-images.githubusercontent.com/63624005/81884462-f425a500-95d2-11ea-865a-5d7ba0d0b22f.jpg)
+![jj-07](https://user-images.githubusercontent.com/63624005/81893316-65bc1e00-95e8-11ea-9c9d-36e751ff65f6.jpg)
 
     - 트랜잭션 (1)
       . 고객이 예약한 건에 대하여 관리자가 예약가능 여부를 확인한 후에 결제를 진행한다.
