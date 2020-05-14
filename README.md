@@ -136,6 +136,8 @@
 ### 어그리게잇으로 묶기
 ![jj-02](https://user-images.githubusercontent.com/63624005/81884385-ba549e80-95d2-11ea-95ae-6c118b7dcc84.jpg)
 
+    - 추가 : 숙소등록
+
 
 ### 바운디드 컨텍스트로 묶기
 ![jj-03](https://user-images.githubusercontent.com/63624005/81884392-c17bac80-95d2-11ea-9e0c-70dd317adfcf.jpg)
