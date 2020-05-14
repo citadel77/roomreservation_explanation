@@ -117,28 +117,23 @@
 ### 이벤트 도출
 ![jj-01](https://user-images.githubusercontent.com/63624005/81884371-b163cd00-95d2-11ea-9865-572619664bce.jpg)
 
-    - 추가 : 숙소 등록됨, 숙소 취소됨
+    - 추가 : 숙소 등록됨, 숙소 등록취소됨
     
 
-### 부적격 이벤트 탈락
-![es-02](https://user-images.githubusercontent.com/63624005/81627175-91000b00-9438-11ea-80cd-45cf02f9e909.jpg)
+### 액터, 커맨드 부착
+![jj-02](https://user-images.githubusercontent.com/63624005/81884385-ba549e80-95d2-11ea-95ae-6c118b7dcc84.jpg)
 
-    - 과정중 도출된 잘못된 도메인 이벤트들을 걸러내는 작업을 수행함
-      . :숙소 재고가능 확인됨", "숙소 재고불가능 확인됨" 제외 : UI 이벤트 (업무적인 의미의 이벤트 아님)
-
-
-### 액터, 커맨드, 폴리시 부착
-![es-03](https://user-images.githubusercontent.com/63624005/81627702-bb9e9380-9439-11ea-8748-a64ba9e2a677.jpeg)
+    - 추가
+      . 액터 : 숙소 등록자
+      . 커맨드 : 숙소 등록. 숙소 등록취소
 
 
 ### 어그리게잇으로 묶기
-![es-04](https://user-images.githubusercontent.com/63624005/81630276-1fc45600-9440-11ea-82a9-1a9732a10b44.jpg)
+![jj-03](https://user-images.githubusercontent.com/63624005/81884392-c17bac80-95d2-11ea-9e0c-70dd317adfcf.jpg)
 
 
 ### 바운디드 컨텍스트로 묶기
-![es-05](https://user-images.githubusercontent.com/63624005/81630293-2ce14500-9440-11ea-9072-5126f89d21c8.jpg)
-
-![ee-05-1](https://user-images.githubusercontent.com/63624005/81630449-96f9ea00-9440-11ea-8631-678dc09c9dec.jpeg)
+![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
 
     - 도메인 서열 분리
       . Core Domain : 예약 
