@@ -81,9 +81,6 @@
 ### 컨텍스트 매핑
 ![image](https://user-images.githubusercontent.com/63624005/100561689-df092d00-32fc-11eb-9b1a-ed67647284e5.png)
 
-![image](https://user-images.githubusercontent.com/63624005/100561706-ea5c5880-32fc-11eb-84da-5e67a0dab581.png)g)
-
-
     - Correlation Key
      . Reservation ID (reservation - management - payment)
     - View
@@ -97,6 +94,7 @@
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
 
+![image](https://user-images.githubusercontent.com/63624005/100561706-ea5c5880-32fc-11eb-84da-5e67a0dab581.png)
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
     - 예약이 확정되면 결제시스템에서 결제가 완료된다. (ok)
