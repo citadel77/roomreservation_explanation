@@ -83,7 +83,6 @@
 
 ![image](https://user-images.githubusercontent.com/63624005/100561706-ea5c5880-32fc-11eb-84da-5e67a0dab581.png)g)
 
-![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
 
     - Correlation Key
      . Reservation ID (reservation - management - payment)
@@ -110,8 +109,7 @@
 
    
 ### 비기능 요구사항에 대한 검증
-![jj-07](https://user-images.githubusercontent.com/63624005/81893316-65bc1e00-95e8-11ea-9c9d-36e751ff65f6.jpg)
-
+![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
     - 트랜잭션 (1)
       . 고객이 예약한 건에 대하여 관리자가 예약가능 여부를 확인한 후에 결제를 진행한다.
     - 장애격리 (2)
