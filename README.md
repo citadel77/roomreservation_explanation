@@ -130,9 +130,11 @@
 - 1차
 ![image](https://user-images.githubusercontent.com/63624005/100561868-5939b180-32fd-11eb-8f9a-debfc8a65cc2.png)
 
-    - 빠른 고객응답 보다는 서비스의 안정성을 중시하는 비즈니스적인 이유로 수정함 (Req/Res --> Pub/Sub)
 
 - 2차
+
+    - 빠른 고객응답 보다는 서비스의 안정성을 중시하는 비즈니스적인 이유로 수정함 (Req/Res --> Pub/Sub)
+    
 ![image](https://user-images.githubusercontent.com/63624005/100561892-69519100-32fd-11eb-99f2-1ec26602fcbd.png)
 
 
