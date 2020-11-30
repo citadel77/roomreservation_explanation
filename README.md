@@ -101,13 +101,14 @@
     - 예약이 취소되면 결제가 취소된다. (ok)
     - 고객이 숙소 예약상태를 중간중간 조회한다. (ok)
     - 관리자가 숙소 요청상태를 중간중간 조회한다. (ok)
-
+    
+![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
 
 ![image](https://user-images.githubusercontent.com/63624005/100561830-47580e80-32fd-11eb-9277-fe1cae4eecf0.png)
     - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정 (Req/Res --> Pub/Sub)
    
 ### 비기능 요구사항에 대한 검증
-![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
+
     - 트랜잭션 (1)
       . 고객이 예약한 건에 대하여 관리자가 예약가능 여부를 확인한 후에 결제를 진행한다.
     - 장애격리 (2)
