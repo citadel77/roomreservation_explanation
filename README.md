@@ -57,16 +57,15 @@
 
   
 ### 액터, 커맨드 부착
-![jj-01-1](https://user-images.githubusercontent.com/63624005/81886071-c5a9c900-95d6-11ea-97ae-334588facdf7.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561589-a8331700-32fc-11eb-9529-fd5e6fbfb6c1.png)
 
 
 ### 어그리게잇으로 묶기
-![jj-02](https://user-images.githubusercontent.com/63624005/81884385-ba549e80-95d2-11ea-95ae-6c118b7dcc84.jpg)
-
+![image](https://user-images.githubusercontent.com/63624005/100561638-c3058b80-32fc-11eb-85e1-9f02767ec27a.png)
 
 
 ### 바운디드 컨텍스트로 묶기
-![jj-03](https://user-images.githubusercontent.com/63624005/81884392-c17bac80-95d2-11ea-9e0c-70dd317adfcf.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561662-d153a780-32fc-11eb-826a-fdaab23e521d.png)
 
     - 도메인 서열 분리
       . Core Domain : 예약 
@@ -79,13 +78,13 @@
       
 
 ### 폴리시 부착
-![jj-04](https://user-images.githubusercontent.com/63624005/81884409-ccced800-95d2-11ea-8119-2c4ce83cb7ac.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561689-df092d00-32fc-11eb-9b1a-ed67647284e5.png)
 
 
 ### 컨텍스트 매핑
-![jj-05](https://user-images.githubusercontent.com/63624005/81898885-88ecca80-95f4-11ea-823d-5838b043ebfe.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561706-ea5c5880-32fc-11eb-84da-5e67a0dab581.png)g)
 
-![jj-05-0](https://user-images.githubusercontent.com/63624005/81898079-eb44cb80-95f2-11ea-88e2-311f4d6782db.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
 
     - Correlation Key
      . Reservation ID (reservation - management - payment)
@@ -94,8 +93,7 @@
      . ManagementList : 예약 요청상황, 예약 가능여부, 결제 진행상황 
 
 
-![jj-05-1](https://user-images.githubusercontent.com/63624005/81898100-f566ca00-95f2-11ea-93dd-ed47482696b5.jpg)
-
+![image](https://user-images.githubusercontent.com/63624005/100561830-47580e80-32fd-11eb-9277-fe1cae4eecf0.png)
     - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정 (Req/Res --> Pub/Sub)
 
 
@@ -129,12 +127,12 @@
 
 ## 헥사고날 아키텍처 다이어그램 도출
 - 1차
-![jj-08-0](https://user-images.githubusercontent.com/63624005/81900474-d1f24e00-95f7-11ea-8c0d-ae8d2b0e3a60.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561868-5939b180-32fd-11eb-8f9a-debfc8a65cc2.png)
 
     - 빠른 고객응답 보다는 서비스의 안정성을 중시하는 비즈니스적인 이유로 수정함 (Req/Res --> Pub/Sub)
 
 - 2차
-![jj-08](https://user-images.githubusercontent.com/63624005/81893560-e4b15680-95e8-11ea-89f1-c4019c1e0fa9.jpg)
+![image](https://user-images.githubusercontent.com/63624005/100561892-69519100-32fd-11eb-99f2-1ec26602fcbd.png)
 
 
 
