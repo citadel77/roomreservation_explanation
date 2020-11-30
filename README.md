@@ -88,9 +88,6 @@
      . ManagementList : 예약 요청상황, 예약 가능여부, 결제 진행상황 
 
 
-![image](https://user-images.githubusercontent.com/63624005/100561830-47580e80-32fd-11eb-9277-fe1cae4eecf0.png)
-    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정 (Req/Res --> Pub/Sub)
-
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
 
@@ -105,6 +102,9 @@
     - 고객이 숙소 예약상태를 중간중간 조회한다. (ok)
     - 관리자가 숙소 요청상태를 중간중간 조회한다. (ok)
 
+
+![image](https://user-images.githubusercontent.com/63624005/100561830-47580e80-32fd-11eb-9277-fe1cae4eecf0.png)
+    - 빠른 고객응답 보다는 서비스의 안정성을 더욱 중시하는 비즈니스적인 이유로 수정 (Req/Res --> Pub/Sub)
    
 ### 비기능 요구사항에 대한 검증
 ![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
