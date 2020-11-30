@@ -53,7 +53,7 @@
 
 
 ### 이벤트 도출
-https://github.com/citadel77/roomreservation_explanation/issues/23#issue-753084666
+![01](https://github.com/citadel77/roomreservation_explanation/issues/23#issue-753084666)
 
   
 ### 액터, 커맨드 부착
