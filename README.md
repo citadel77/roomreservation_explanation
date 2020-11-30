@@ -60,12 +60,9 @@
 ![image](https://user-images.githubusercontent.com/63624005/100561589-a8331700-32fc-11eb-9529-fd5e6fbfb6c1.png)
 
 
-### 어그리게잇으로 묶기
+### 어그리게잇으로 묶기, 바운디드 컨텍스트로 묶기
 ![image](https://user-images.githubusercontent.com/63624005/100561638-c3058b80-32fc-11eb-85e1-9f02767ec27a.png)
 
-
-### 바운디드 컨텍스트로 묶기
-![image](https://user-images.githubusercontent.com/63624005/100561662-d153a780-32fc-11eb-826a-fdaab23e521d.png)
 
     - 도메인 서열 분리
       . Core Domain : 예약 
@@ -78,10 +75,12 @@
       
 
 ### 폴리시 부착
-![image](https://user-images.githubusercontent.com/63624005/100561689-df092d00-32fc-11eb-9b1a-ed67647284e5.png)
+![image](https://user-images.githubusercontent.com/63624005/100561662-d153a780-32fc-11eb-826a-fdaab23e521d.png)
 
 
 ### 컨텍스트 매핑
+![image](https://user-images.githubusercontent.com/63624005/100561689-df092d00-32fc-11eb-9b1a-ed67647284e5.png)
+
 ![image](https://user-images.githubusercontent.com/63624005/100561706-ea5c5880-32fc-11eb-84da-5e67a0dab581.png)g)
 
 ![image](https://user-images.githubusercontent.com/63624005/100561734-006a1900-32fd-11eb-801c-219aedf91d45.png)
@@ -98,7 +97,6 @@
 
 
 ### 1차 완성본 (기능적/비기능적 요구사항 검증)
-![jj-06](https://user-images.githubusercontent.com/63624005/81893304-5c32b600-95e8-11ea-80dd-343a823d3579.png)
 
     - 고객이 숙소를 선택하여 예약한다. (ok)
     - 예약이 발생하면 숙소관리시스템에서 관리자가 예약을 확정한다. (ok)
